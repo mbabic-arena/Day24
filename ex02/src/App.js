@@ -3,7 +3,7 @@ import "./App.css";
 
 class App extends Component {
   setMyStorage = () => {
-    document.cookie = ("Year", "2021");
+    document.cookie = "Year=2021";
     localStorage.setItem("Paragon", "yes, but Arena first");
     sessionStorage.setItem("frontend", "React");
   };
@@ -15,6 +15,7 @@ class App extends Component {
       .split("=")[1];
     let myLocalStorageData = localStorage.getItem("Paragon");
     let mySessionStorage = sessionStorage.getItem("frontend");
+    return [myCookieData, myLocalStorageData, mySessionStorage];
   };
 
   render() {
