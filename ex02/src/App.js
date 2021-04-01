@@ -14,8 +14,8 @@ class App extends Component {
       .find((row) => row.startsWith("Year="))
       .split("=")[1];
     const myLocalStorageData = localStorage.getItem("Paragon");
-    const mySessionStorage = sessionStorage.getItem("frontend");
-    return [myCookieData, myLocalStorageData, mySessionStorage];
+    const mySessionStorageData = sessionStorage.getItem("frontend");
+    return [myCookieData, myLocalStorageData, mySessionStorageData];
   };
 
   render() {
